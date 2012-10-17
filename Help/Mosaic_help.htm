@@ -1,0 +1,80 @@
+<h1>Mosaic</h1>
+
+<p>
+The Mosaic program allows images to be viewed as a mosaic. They can be stitched together (correlated so that edges match) and blended (so that edges become invisible). It works by loading only the images required at any one time and so has a small memory footprint yet can handle mosaics that are Gigabytes in size.
+</p>
+
+<h2>Opening a Mosaic</h2>
+<p>
+Use the menu File->open or the Open button on the tool-bar.
+Mosaics that have been captured by the Region Scan function of a Gray Institute microscope will have a '.seq' file that should be opened by Mosaic. The associated images that form the Mosaic should be in the directory with the seq file.
+Older mosaics may have 2 seq files. You should open the '_v2.seq' file with this program. It uses the version 2 format of seq file.
+</p>
+
+<h2>Main User Interface</h2>
+<p>
+<b>Left-click and drag</b> to pan around the mosaic.<br>
+<b>Double-left-click</b> to edit the position of a single image (use arrow keys to move the image, click the green tick or press 'enter' when done, or click the red cross or press 'escape' to cancel).<br>
+<b>Click on the overview image</b> (bottom left of the main view) to move quickly around the mosaic.<br>
+Use the <b>mouse wheel</b> to zoom in or out.<br>
+</p>
+
+<p>
+After every operation the main view may take a second or two to update. During this time a rough approximation to the current view is shown which will change to the fully stitched and blended, full resolution view. The time this update takes will depend on you computer and whether Blending has been selected.
+</p>
+
+<p>
+<b>Status Bar</b> - The bar at the bottom of the main window shows the total size of the whole mosaic in pixels (at 100% zoom) and indicates if Blending and Correlation are currently being used for the main display and export. As the mouse is moved over the main view, the name of the current image is shown in the status bar, together with its default position and adjusted position if correlation has been performed or the image has been moved by hand.
+</p>
+
+<h2>Menu and Tool-bar functions</h2>
+<h3>File</h3>
+<b>Open</b> - See 'Opening a Mosaic' above<br>
+<b>Screenshot</b> - You can save an image of the current view (at screen resolution) that will include the scale bar and/or joins if visible.<br>
+<b>Export</b> - You can save the whole mosaic or a portion of it at any required resolution (at 100% the original camera resolution is used). If a Region has been selected, this will be exported. If no Region is selected, the whole mosaic is exported. See the Exporting Section below.<br>
+<b>Exit</b> - Quits the program.<br>
+
+<h3>View</h3>
+<b>Image Information</b> - Shows a window with the acquisition metadata from the '_metadata.txt' file if the mosaic was acquired on a Gray Institute microscope.
+
+<h3>Options</h3>
+<b>Show Overview</b> - show or hide the overview sub-window at the bottom left on the main view.<br>
+<b>Show Joins</b> - show or hide the joins between images as red lines. The outlines of all images are shown. Overlaps appear as 'tram-lines'.<br>
+<b>Show Scalebar</b> - show a scale bar in the bottom right hand corner of the main view. The real scale is represented if known from the metadata.<br>
+
+<h3>Display</h3>
+<b>Region</b> (Tool-bar - Region) - Allows the drawing of a region. Use before the 'Export function' to export a region of the mosaic.<br>
+<b>Linear Scale</b> (Tool-bar - Linear Scale) - Change the display scale of the main display to enhance or reduce contrast and brightness.
+
+<h3>Processing</h3>
+<b>Perform Correlation</b> - Opens the 'Correlation' window to perform image stitching.<br>
+<b>Perform Blending</b> - Will turn on the blending of the images across their overlap for the main display and for image export.
+
+
+<h2>Exporting</h2>
+You can save the whole mosaic or a portion of it at any required resolution up to 100% zoom (at 100% the original camera resolution is used). 
+Choose a file name to save to using the '...' browse button. Choose the 'ics' file type to maintain the original data type and metadata, otherwise loss of information may occur.<br>
+Select a Width or Height for the final image (the aspect ratio will be maintained). The size is limited to 100% or 20,000 pixels in any direction (whichever is smaller).<br>
+The zoom level and real scale in microns per pixel for the image to be exported are indicated on the window.
+Click the Save button to save the image.<br>
+If a Region has been selected before the Export function is selected, the title bar of the Export window will show "Exporting defined region" and only the region will be exported. If no Region has been selected, the title bar of the Export window will show "Exporting entire image" and the whole mosaic is exported. Blending and correlation are used on the exported image according to the settings indicated in the status bar at the bottom of the main window.<br>
+
+
+<h2>Correlation</h2>
+Choose "Perform Correlation" from the Processing menu of the main window to open the correlation window.
+Correlation Types - Contains preset default Correlation Options for different situations.<br>
+<b>Use Correlations</b> - Tick here to use the current correlation values for the main display and export (also indicated in the status bar).
+
+<h3>Correlation Options</h3>
+<b>Expected Overlap</b> - Shows the default overlap expected from the stage positions used at the time of acquisition (the smaller overlap is shown if they differ in the horizontal and vertical directions).<br>
+<b>Strip size</b> - The size of the image strip used to perform correlation. Larger is better but will be slower.<br>
+<b>Search size</b> - The size of the search area used to find a better correlation from the default position. The maximum allowed displacement will be half the search size. The maximum expected error in the image positions can be used to set this value. Larger values lead to slower processing.<br>
+<b>Pre filter</b> - 'None' correlates the images grey levels. 'Edge Detection' will perform an edge enhancing filter on each image before correlation which is beneficial in some cases.<br>
+<b>Search all edges</b> - Perform correlation with all neighbouring images and choose the overall position with the highest normalised cross-correlation value. Otherwise just the neighboring image with the largest overlap is selected for correlation.<br>
+<b>Reset</b> - Return the options to their default values.<br>
+<b>Start</b> - Start correlating images.<br>
+<b>Stop</b> - Abort correlating this mosaic.<br>
+<b>Pause</b> - Pause the processing to view the results so far.<br>
+
+
+

@@ -1,0 +1,32 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\CorrelatorWindow.cs" ctype="Workbench">
+    <Files>
+      <File FileName="src\AboutBox.cs" Line="1" Column="1" />
+      <File FileName="src\Profile.cs" Line="1" Column="1" />
+      <File FileName="src\RoiTool.cs" Line="1" Column="1" />
+      <File FileName="src\CorrelatorWindow.cs" Line="186" Column="1" />
+      <File FileName="..\..\..\ATD_Libraries\FreeImageAlgorithms\trunk\Wrappers\FreeImageAlgorithmsSharp\FreeImageAlgorithms.cs" Line="689" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="FreeImageAlgorithmsSharp" expanded="True" />
+          <Node name="FreeImageIcsSharp" expanded="True">
+            <Node name="References" expanded="True" />
+          </Node>
+          <Node name="Mosaic" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="Resources" expanded="True" />
+            <Node name="src" expanded="True">
+              <Node name="CorrelatorWindow.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

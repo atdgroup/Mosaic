@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MosaicSetup", "MosaicSetup.vdproj", "{68C5F484-4AA6-4CF6-A660-4887202D1715}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mosaic", "Mosaic.csproj", "{CEAB6271-08DE-4510-9AE8-55EBD5B26074}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68C5F484-4AA6-4CF6-A660-4887202D1715}.Debug|Any CPU.ActiveCfg = Debug
+		{68C5F484-4AA6-4CF6-A660-4887202D1715}.Debug|Any CPU.Build.0 = Debug
+		{68C5F484-4AA6-4CF6-A660-4887202D1715}.Release|Any CPU.ActiveCfg = Release
+		{68C5F484-4AA6-4CF6-A660-4887202D1715}.Release|Any CPU.Build.0 = Release
+		{CEAB6271-08DE-4510-9AE8-55EBD5B26074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEAB6271-08DE-4510-9AE8-55EBD5B26074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEAB6271-08DE-4510-9AE8-55EBD5B26074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEAB6271-08DE-4510-9AE8-55EBD5B26074}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

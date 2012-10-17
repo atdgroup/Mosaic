@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CEAB6271-08DE-4510-9AE8-55EBD5B26074}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>MosaicIcon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Mosaic</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ImageStitching</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>ImageStitching.MosaicApp</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="src\ContentCanvas\Adorners\MoveAdorner.cs" />
+    <Compile Include="src\ContentCanvas\Adorners\MoveChrome.cs" />
+    <Compile Include="src\ContentCanvas\Adorners\RubberbandAdorner.cs" />
+    <Compile Include="src\ContentCanvas\DesignerCanvas.cs" />
+    <Compile Include="src\ContentCanvas\DesignerItem.cs" />
+    <Compile Include="src\ContentCanvas\DesignerItemDecorator.cs" />
+    <Compile Include="src\ContentCanvas\DragCanvas.cs" />
+    <Compile Include="src\ContentCanvas\DragCanvasContainer.xaml.cs" />
+    <Compile Include="src\ContentCanvas\MoveThumb.cs" />
+    <Compile Include="src\ContentCanvas\Toolbox.cs" />
+    <Compile Include="src\ContentCanvas\ToolboxItem.cs" />
+    <Compile Include="src\ContentCanvas\ZoomBox.cs" />
+    <Compile Include="src\ControlExtensions.cs" />
+    <Compile Include="src\Correlation\CorrelationDebugForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Correlation\CorrelationDebugForm.Designer.cs">
+      <DependentUpon>CorrelationDebugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Correlation\CorrelationTile.cs" />
+    <Compile Include="src\Correlation\Correlator.cs" />
+    <Compile Include="src\Correlation\CorrelatorOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Correlation\CorrelatorOptionPanel.Designer.cs">
+      <DependentUpon>CorrelatorOptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Correlation\CorrelatorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Correlation\CorrelatorWindow.Designer.cs">
+      <DependentUpon>CorrelatorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Correlation\KernelBasedOverlapCorrelator.cs" />
+    <Compile Include="src\Correlation\KernelBasedOverlapCorrelatorOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Dialogs\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Dialogs\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Dialogs\ImageInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Dialogs\ImageInformation.Designer.cs">
+      <DependentUpon>ImageInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Dialogs\SaveDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Dialogs\SaveDialog.Designer.cs">
+      <DependentUpon>SaveDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Dialogs\ZedGraphWithCursorsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Dialogs\ZedGraphWithCursorsControl.Designer.cs">
+      <DependentUpon>ZedGraphWithCursorsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\FileReaders\ManualImport\ImageCollectionArrangerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\FileReaders\ManualImport\ImageCollectionArrangerForm.Designer.cs">
+      <DependentUpon>ImageCollectionArrangerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\FileReaders\ManualImport\ImageCollectionFileReader.cs" />
+    <Compile Include="src\FileReaders\ManualImport\TextStringDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\FileReaders\ManualImport\TextStringDialog.Designer.cs">
+      <DependentUpon>TextStringDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\FileReaders\MultiSequenceFileReader.cs" />
+    <Compile Include="src\Plugins\CompositeRGBBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Plugins\CompositeRGBBalance.designer.cs">
+      <DependentUpon>CompositeRGBBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Plugins\Histogram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Plugins\Histogram.Designer.cs">
+      <DependentUpon>Histogram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Plugins\LinearScaleTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Plugins\LinearScaleTool.Designer.cs">
+      <DependentUpon>LinearScaleTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Plugins\Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Plugins\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Plugins\RoiTool.cs" />
+    <Compile Include="src\Plugins\ScalebarPlugin.cs" />
+    <Compile Include="src\TileLoadInfo.cs" />
+    <Compile Include="src\TileViewEditToolBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\TileViewEditToolBox.Designer.cs">
+      <DependentUpon>TileViewEditToolBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\EnumDescriptionAttribute.cs" />
+    <Compile Include="src\FileReaders\MosaicFileReader.cs" />
+    <Compile Include="src\FileReaders\RosMosaicSequenceFileReader.cs" />
+    <Compile Include="src\FileReaders\SequenceFileReader.cs" />
+    <Compile Include="src\FileReaders\Version2SequenceFileReader.cs" />
+    <Compile Include="src\ImageView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ImageView.Designer.cs">
+      <DependentUpon>ImageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\IniParser.cs" />
+    <Compile Include="src\MosaicApp.cs" />
+    <Compile Include="src\MosaicInfo.cs" />
+    <Compile Include="src\MosaicPlugin.cs" />
+    <Compile Include="src\MosaicWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\MosaicWindow.designer.cs">
+      <DependentUpon>MosaicWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\RectangleExtensions.cs" />
+    <Compile Include="src\SingletonController.cs" />
+    <Compile Include="src\ThreadController.cs" />
+    <Compile Include="src\ThumbnailMap.cs" />
+    <Compile Include="src\TiledImageView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\TileSaver.cs" />
+    <Compile Include="src\TileView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\SubVersionAttribute.cs" />
+    <Compile Include="src\Tile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\TileOverView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\TileReader.cs" />
+    <Compile Include="src\Utilities.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Correlation\CorrelationDebugForm.resx">
+      <DependentUpon>CorrelationDebugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Correlation\CorrelatorOptionPanel.resx">
+      <DependentUpon>CorrelatorOptionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Correlation\CorrelatorWindow.resx">
+      <DependentUpon>CorrelatorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Correlation\KernelBasedOverlapCorrelatorOptionPanel.resx">
+      <DependentUpon>KernelBasedOverlapCorrelatorOptionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Dialogs\AboutBox.resources" />
+    <EmbeddedResource Include="src\Dialogs\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Dialogs\ImageInformation.resources" />
+    <EmbeddedResource Include="src\Dialogs\ImageInformation.resx">
+      <DependentUpon>ImageInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Dialogs\SaveDialog.resources" />
+    <EmbeddedResource Include="src\Dialogs\SaveDialog.resx">
+      <DependentUpon>SaveDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Dialogs\ZedGraphWithCursorsControl.resources" />
+    <EmbeddedResource Include="src\Dialogs\ZedGraphWithCursorsControl.resx">
+      <DependentUpon>ZedGraphWithCursorsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\FileReaders\ManualImport\ImageCollectionArrangerForm.resx">
+      <DependentUpon>ImageCollectionArrangerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\FileReaders\ManualImport\TextStringDialog.resx">
+      <DependentUpon>TextStringDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\MosaicWindow.resx">
+      <DependentUpon>MosaicWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Plugins\CompositeRGBBalance.resx">
+      <DependentUpon>CompositeRGBBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Plugins\Histogram.resx">
+      <DependentUpon>Histogram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Plugins\LinearScaleTool.resx">
+      <DependentUpon>LinearScaleTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Plugins\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\TileView.resx">
+      <DependentUpon>TileView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\TileOverView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TileOverView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MosaicIcon.ico" />
+    <EmbeddedResource Include="Resources\cross.png" />
+    <EmbeddedResource Include="Resources\tick.png" />
+    <EmbeddedResource Include="Resources\help.ico">
+      <LogicalName>ImageStitching.Resources.help.ico</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\scale_icon.ico">
+      <LogicalName>ImageStitching.Resources.scale_icon.ico</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\roi_icon.ico">
+      <LogicalName>ImageStitching.Resources.roi_icon.ico</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\profile_icon.ico">
+      <LogicalName>ImageStitching.Resources.profile_icon.ico</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\TileViewEditToolBox.resx">
+      <DependentUpon>TileViewEditToolBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="src\ContentCanvas\DragCanvasContainer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\ContentCanvas\Resources\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\ContentCanvas\Resources\DesignerItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\ContentCanvas\Resources\Expander.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\ContentCanvas\Resources\MoveChrome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\ContentCanvas\Resources\ScrollBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\ContentCanvas\Resources\ScrollViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\ContentCanvas\Resources\Slider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\ContentCanvas\Resources\StatusBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\ContentCanvas\Resources\ToolBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\ContentCanvas\Resources\Toolbox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\ContentCanvas\Resources\Tooltip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\ContentCanvas\Resources\ZoomBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ATD_Libraries\FreeImageAlgorithms\trunk\Wrappers\FreeImageAlgorithmsSharp\FreeImageAlgorithmsSharp.csproj">
+      <Project>{D519D50B-B253-4F31-A8CA-BA6FDA73E59B}</Project>
+      <Name>FreeImageAlgorithmsSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ATD_Libraries\FreeImageIcs\Wrappers\FreeImageIcsSharp\FreeImageIcsSharp.csproj">
+      <Project>{670738FC-C738-4C91-835C-29146C8BC117}</Project>
+      <Name>FreeImageIcsSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

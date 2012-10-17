@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="ImageStitching.DragCanvasContainer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="clr-namespace:DiagramDesigner"
+    xmlns:my="clr-namespace:ImageStitching" Background="Beige" HorizontalAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Stretch">
+
+    <UserControl.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="Resources/DesignerItem.xaml"/>
+                <ResourceDictionary Source="Resources/Brushes.xaml"/>
+                <ResourceDictionary Source="Resources/Expander.xaml"/>
+                <ResourceDictionary Source="Resources/ScrollBar.xaml"/>
+                <ResourceDictionary Source="Resources/ScrollViewer.xaml"/>
+                <ResourceDictionary Source="Resources/Slider.xaml"/>
+                <ResourceDictionary Source="Resources/Toolbox.xaml"/>
+                <ResourceDictionary Source="Resources/Tooltip.xaml"/>
+                <ResourceDictionary Source="Resources/ZoomBox.xaml"/>
+                <ResourceDictionary Source="Resources/StatusBar.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <DockPanel Margin="0">
+        <Grid>
+            <Grid>
+                <TextBox Name="description" Background="Beige" Width="482" HorizontalAlignment="Left" VerticalAlignment="Top"
+                         Height="82" MaxLines="10" FontSize="14"
+                         FontWeight="Bold" Padding="10" IsReadOnly="True"
+                         Text="Here you can drag single or multiple images around the canvas.&#x0a;Try to arrange your images in their approximate positions" AllowDrop="False" Focusable="False" IsEnabled="True">
+                    <TextBox.BorderBrush>
+                        <SolidColorBrush />
+                    </TextBox.BorderBrush>
+                </TextBox>
+            </Grid>
+            <Grid>
+                    <ScrollViewer Name="DesignerScrollViewer"
+                                  Background="Transparent"
+                                  HorizontalScrollBarVisibility="Auto"
+                                  VerticalScrollBarVisibility="Auto">
+                        <s:DesignerCanvas x:Name="MyDesignerCanvas"
+                                          MinHeight="800"
+                                          MinWidth="1000"
+                                          AllowDrop="True">
+                        <s:DesignerCanvas.Background>
+                            <SolidColorBrush />
+                        </s:DesignerCanvas.Background>
+                    </s:DesignerCanvas>
+                    </ScrollViewer>
+                 
+                </Grid>
+        </Grid>
+    </DockPanel>
+  
+</UserControl>
