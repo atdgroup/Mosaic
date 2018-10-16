@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Gray Institute for Radiation Oncology and Biology")]
 [assembly: AssemblyProduct("MosaicStitcher")]
-[assembly: AssemblyCopyright("Copyright ©  2006-2011")]
+[assembly: AssemblyCopyright("Copyright ©  2006-2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -30,9 +30,9 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.6.1758.0")]
-[assembly: AssemblyFileVersion("1.6.1758.0")]
+[assembly: AssemblyVersion("1.7.0.0")]
+[assembly: AssemblyFileVersion("1.7.0.0")]
 
 [assembly: CLSCompliant(false)]
 
-[assembly: SubVersion("1758")]
+[assembly: SubVersion("1759")]

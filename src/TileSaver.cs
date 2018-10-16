@@ -333,7 +333,7 @@ namespace ImageStitching
             sw.Write(Tile.channelShift[1].X + "\u0000");
             sw.Write(Tile.channelShift[1].Y + "\u0000");
             sw.Write(Tile.channelShift[2].X + "\u0000");
-            sw.Write(Tile.channelShift[2].Y + "\u0000");
+            sw.Write(Tile.channelShift[2].Y + "\u0000\r\n");
             sw.Write(Tile.channelPrefix[0] + "\u0000\r\n");
             sw.Write(Tile.channelPrefix[1] + "\u0000\r\n");
             sw.Write(Tile.channelPrefix[2] + "\u0000\r\n");
